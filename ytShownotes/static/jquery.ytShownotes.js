@@ -1,5 +1,5 @@
 /*
-* jQuery ytShownotes Plugin 0.3.0
+* jQuery ytShownotes Plugin 0.4.0
 * https://github.com/MichaelDanilov/jQuery.ytShownotes
 *
 * Copyright 2013, Michael Danilov
@@ -50,8 +50,8 @@ var methods = {
 						e.target.cueVideoById(
 							{
 								videoId: String(options.ytVideo.videoID),
-								startSeconds: String(options.ytVideo.startTime),
-								endSeconds: String(options.ytVideo.endTime)
+								startSeconds: options.ytVideo.startTime,
+								endSeconds: options.ytVideo.endTime
 							}
 						);
 						e.target.playVideo();
@@ -77,15 +77,19 @@ var methods = {
 			methods.addPlayer($.extend(true, data, params));
 		});
 	},
-	getHTML:function(list, tag = 'div', tagClass = 'ytShownotes', safe = false) {
-		if (tag === undefined) {
+	getHTML:function() {
+		var list = arguments[0], tag, tagClass, safe = false;
+		if (arguments[1] === undefined) {
 			tag = 'div';
 		};
-		if (tagClass === undefined) {
+		if (arguments[2] === undefined) {
 			tagClass = 'ytShownotes';
 		} else {
-			tagClass = tagClass.replace(/( )+/gi,' ');
-		}
+			tagClass = arguments[2].replace(/( )+/gi,' ');
+		};
+		if (arguments[3] !== undefined) {
+			safe = arguments[3];
+		};
 		var html = '';
 		for (var i = 0; i < list.length; i++) {
 			html += '<' + tag + ' class="' + tagClass + '"';
