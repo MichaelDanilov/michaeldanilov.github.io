@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<base href="/ytShownotes/en/">
+	<title>Demo - jQuery ytShownotes Plugin</title>
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//yandex.st/highlightjs/7.3/styles/github.min.css">
+	<style>
+	.hero-unit{
+		text-align: center;
+	}
+	.ytShownotes {
+		color: #0088CC;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	.ytShownotes:hover, .ytShownotes:focus {
+		color: #005580;
+		text-decoration: underline;
+	}
+	.ytShownotes:hover, .ytShownotes:active {
+		outline: 0 none;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="./">jQuery ytShownotes Plugin</a>
+				<ul class="nav">
+					<li><a href="./">How to ...</a></li>
+					<li class="active"><a href="./demo/">Demo</a></li>
+					<li><a href="./tools/">Tools</a></li>
+					<li class="divider-vertical"></li>
+					<li><a href="https://github.com/MichaelDanilov/jQuery.ytShownotes/archive/master.zip">Download</a></li>
+					<li><a href="https://github.com/MichaelDanilov/jQuery.ytShownotes">Source code on GitHub</a></li>
+				</ul>
+				<ul class="nav pull-right">
+					<li><a href="../ru/demo/">По-русски</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="hero-unit" id="ytShownotesWrapper">
+			<iframe id="ytShownotesPlayer" width="640" height="360" src="//www.youtube.com/embed/5qF_qbaWt3Q" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div class="row">
+			<div class="span8 offset2">
+				<div class="tabs">
+					<ul id="tabs" class="nav nav-tabs">
+						<li class="active">
+							<a href="#lp" data-toggle="tab">Linkin Park - Transformers 3 Premiere 2011 (MTV World Stage Special) HD</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="lp">
+							<table class="table table-hover">
+								<tbody>
+									<tr>
+										<td class="ytShownotes" data-ytvideoid="KTadRR1BNSM" data-ytstarttime="0" data-ytendtime="60">Moscow Intro</td>
+									</tr>
+									<tr>
+										<td class="ytShownotes" data-ytvideoid="KTadRR1BNSM" data-ytstarttime="60" data-ytendtime="325">New Divide</td>
+									</tr>
+									<tr>
+										<td class="ytShownotes" data-ytvideoid="KTadRR1BNSM" data-ytstarttime="325" data-ytendtime="536">Given Up</td>
+									</tr>
+									<tr>
+										<td class="ytShownotes" data-ytvideoid="KTadRR1BNSM" data-ytstarttime="541" data-ytendtime="652">Jornada Del Muerto</td>
+									</tr>
+									<tr>
+										<td class="ytShownotes" data-ytvideoid="KTadRR1BNSM" data-ytstarttime="652" data-ytendtime="898">Waiting For The End</td>
+									</tr>
+									<tr>
+										<td class="ytShownotes" data-ytvideoid="KTadRR1BNSM" data-ytstarttime="898" data-ytendtime="1155">Breaking The Habit</td>
+									</tr>
+									<tr>
+										<td class="ytShownotes" data-ytvideoid="KTadRR1BNSM" data-ytstarttime="1155" data-ytendtime="1245">Fallout</td>
+									</tr>
+									<tr>
+										<td class="ytShownotes" data-ytvideoid="KTadRR1BNSM" data-ytstarttime="1245" data-ytendtime="1582">The Catalyst</td>
+									</tr>
+									<tr>
+										<td class="ytShownotes" data-ytvideoid="KTadRR1BNSM" data-ytstarttime="1589" data-ytendtime="1814">In The End</td>
+									</tr>
+									<tr>
+										<td class="ytShownotes" data-ytvideoid="KTadRR1BNSM" data-ytstarttime="1820" data-ytendtime="2066">Iridescent</td>
+									</tr>
+									<tr>
+										<td class="ytShownotes" data-ytvideoid="KTadRR1BNSM" data-ytstarttime="2081" data-ytendtime="2282">What I've Done</td>
+									</tr>
+									<tr>
+										<td class="ytShownotes" data-ytvideoid="KTadRR1BNSM" data-ytstarttime="2282" data-ytendtime="2640">Bleed It Out</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<footer>
+			<p>&copy; 2013 <a href="http://danilov.me/">Michael Danilov</a>. Powered by <a href="https://github.com/">GitHub</a> with using <a href="http://getbootstrap.com/">Bootstrap</a>, <a href="http://jquery.com/">jQuery</a> and <a href="http://softwaremaniacs.org/soft/highlight/en/">highlight.js</a></p>
+		</footer>
+	</div>
+	<script type="text/javascript" src="//yandex.st/jquery/2.0.3/jquery.min.js" defer></script>
+	<script type="text/javascript" src="../static/jquery.ytShownotes.js" defer></script>
+	<script type="text/javascript" src="//yandex.st/highlightjs/7.3/highlight.min.js" defer></script>
+	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js" defer></script>
+	<script type="text/javascript" src="../static/bootstrap-tab.js" defer></script>
+	<script type="text/javascript" src="./script.js" defer></script>
+</body>
+</html>

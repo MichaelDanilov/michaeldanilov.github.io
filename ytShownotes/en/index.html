@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<base href="/ytShownotes/en/">
+	<title>How to ... - jQuery ytShownotes Plugin</title>
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//yandex.st/highlightjs/7.3/styles/github.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="./">jQuery ytShownotes Plugin</a>
+				<ul class="nav">
+					<li class="active"><a href="./">How to ...</a></li>
+					<li><a href="./demo/">Demo</a></li>
+					<li><a href="./tools/">Tools</a></li>
+					<li class="divider-vertical"></li>
+					<li><a href="https://github.com/MichaelDanilov/jQuery.ytShownotes/archive/master.zip">Download</a></li>
+					<li><a href="https://github.com/MichaelDanilov/jQuery.ytShownotes">Source code on GitHub</a></li>
+				</ul>
+				<ul class="nav pull-right">
+					<li><a href="../ru/">По-русски</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<h1>How to</h1>
+				<h2>Install</h2>
+				<p>
+					Download and install jQuery. <a href="http://jquery.com/download/">Guide on the official site</a>. Example:
+				</p>
+				<pre class="xml">&lt;script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js" defer&gt;&lt;/script&gt;</pre>
+				<p>
+					<a href="https://github.com/MichaelDanilov/jQuery.ytShownotes/archive/master.zip">Download</a> and install plugin ytShownotes. Example:
+				</p>
+				<pre class="xml">&lt;script type="text/javascript" src="jquery.ytShownotes.js" defer&gt;&lt;/script&gt;</pre>
+				<p class="alert">
+					Don't use the link, which you can see in the code of this site - it can change!
+				</p>
+				<p class="alert">
+					Use only tested on your site version of the plugin. Do not replace old versions of mindlessly to new. Always test in your environment!
+				</p>
+				<h2>Use</h2>
+				<h3>Block for video</h3>
+				<p>
+					Before using the plugin is insert code to html, which will be contain video, and add to it id attribute.
+				</p>
+				<pre class="xml">&lt;div id="ytShownotesWrapper"&gt;
+  &lt;div id="ytShownotesPlayer"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+				<p class="alert">
+					Wrapper-block must have id=<code>ytShownotesWrapper</code>. Inside this block will be insert the iframe with id=<code>ytShownotesPlayer</code>.
+				</p>
+				<h3>Data format</h3>
+				<p>
+					This plugin uses a specific data format. First of all you need to bring the data in the proper format. If the data is already in the proper format, then see Initialization.
+				</p>
+				<h4>Use generation tools</h4>
+				<p>
+					On <a href="./tools/">Tools</a> you can see a tools for generation data in the proper format.</p>
+				<p>
+					On Tools is necessary paste link to Youtube video and set caption.
+				</p>
+				<p>
+					Optional parameters are Start time and Stop time, also optional set size of video (default 640x360 pixels).
+				</p>
+				<p>
+					Button <b>AddToList</b> add entered data to the list. Button <b>Delete</b> delete this element from list.
+				</p>
+				<p>
+					Button <b>Preview</b> allows you to view video without adding to the list.
+				</p>
+				<p>
+					Button <b>Clear</b> remove enterrd data from the form, but don't erase the list.
+				</p>
+				<p>
+					Fields <b>Tag</b> and <b>Tag Class</b> allow to set element of generated data inside html-tag (default to <code>div</code>) and also set a class of this tag (default <code>ytShownotes</code>).
+				</p>
+				<p>
+					Button <b>Get HTML</b> show generated html-code below. This data prepared to use in the plugin.
+				</p>
+				<h3>Initialization and binding to data</h3>
+				<p>
+					For initialize the plugin and bind it to data, you must call the following method of plugin:
+				</p>
+				<pre class="js">$('.ytShownotes').ytShownotes();</pre>
+				<p>
+					or direct specify the event, which is bind the player launch:
+				</p>
+				<pre class="js">$('.ytShownotes').ytShownotes('click');</pre>
+				<p>
+					where <code>.ytShownotes</code> is a class, which contains your data, <code>click</code> - is a mouse event 'click to element';
+				</p>
+				<h3>Work?</h3>
+				<p>
+					If you have done all steps correctly, then click on your data in the block <code>div#ytShownotesWrapper</code> will launch your preferred video with specified parameters.
+				</p>
+				<h3>Does Not Work?</h3>
+				<p>
+					If the plugin does not work, you must return to the beginning of this instruction and verify that all steps.
+				</p>
+				<p>
+					If, after rechecking plugin does not work anything, then write about error on <a href="https://github.com/MichaelDanilov/jQuery.ytShownotes/issues">GitHub issues</a>.
+				</p>
+				<p>
+					Questions and other proposals also write on <a href="https://github.com/MichaelDanilov/jQuery.ytShownotes/issues">Issues</a> page on GitHub.
+				</p>
+			</div>
+		</div>
+		<hr>
+		<footer>
+			<p>&copy; 2013 <a href="http://danilov.me/">Michael Danilov</a>. Powered by <a href="https://github.com/">GitHub</a> with using <a href="http://getbootstrap.com/">Bootstrap</a>, <a href="http://jquery.com/">jQuery</a> and <a href="http://softwaremaniacs.org/soft/highlight/en/">highlight.js</a></p>
+		</footer>
+	</div>
+	<script type="text/javascript" src="//yandex.st/jquery/2.0.3/jquery.min.js" defer></script>
+	<script type="text/javascript" src="../static/jquery.ytShownotes.js" defer></script>
+	<script type="text/javascript" src="//yandex.st/highlightjs/7.3/highlight.min.js" defer></script>
+	<script type="text/javascript" src="./script.js" defer></script>
+</body>
+</html>
