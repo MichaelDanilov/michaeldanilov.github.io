@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<base href="/ytShownotes/en/">
+	<title>Tools - jQuery ytShownotes Plugin</title>
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//yandex.st/highlightjs/7.3/styles/github.min.css">
+	<style>
+	.hero-unit{
+		text-align: center;
+	}
+	div#ytShownotesPlayer {
+		background-image: url("http://lorempixel.com/640/360/abstract/VideoPlace/");
+		display: block;
+		height: 360px;
+		margin: 0 auto;
+		width: 640px;
+	}
+	.dnlv-ytShownotes {
+		cursor: pointer;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="./">jQuery ytShownotes Plugin</a>
+				<ul class="nav">
+					<li><a href="./">How to ...</a></li>
+					<li><a href="./demo/">Demo</a></li>
+					<li class="active"><a href="./tools/">Tools</a></li>
+					<li class="divider-vertical"></li>
+					<li><a href="https://github.com/MichaelDanilov/jQuery.ytShownotes/archive/master.zip">Download</a></li>
+					<li><a href="https://github.com/MichaelDanilov/jQuery.ytShownotes">Source code on GitHub</a></li>
+				</ul>
+				<ul class="nav pull-right">
+					<li><a href="../ru/tools/">По-русски</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="hero-unit" id="ytShownotesWrapper">
+			<div id="ytShownotesPlayer"></div>
+		</div>
+		<div class="row">
+			<div class="span4">
+				<form>
+					<div class="control-group">
+						<label class="control-label" for="inputytvideoid">Link to Youtube video</label>
+						<input type="text" id="inputytvideoid" placeholder="http://youtu.be/5qF_qbaWt3Q" class="span4 dnlv-inputytvideoid">
+					</div>
+					<div>
+						<div class="input-prepend control-group">
+							<span class="add-on">Start</span>
+							<input class="span1 dnlv-inputytstart" id="inputytstart" type="text" placeholder="0:00">
+						</div>
+						<div class="input-prepend control-group">
+							<span class="add-on">Stop</span>
+							<input class="span1 dnlv-inputytstop" id="inputytstop" type="text" placeholder="1:00">
+						</div>
+					</div>
+					<div>
+						<div class="input-prepend control-group">
+							<span class="add-on">Width</span>
+							<input class="span1 dnlv-inputytwidth" id="inputytwidth" type="text" placeholder="640">
+						</div>
+						<div class="input-prepend control-group">
+							<span class="add-on">Height</span>
+							<input class="span1 dnlv-inputytheight" id="inputytheight" type="text" placeholder="360">
+						</div>
+					</div>
+					<div class="control-group">
+						<input type="text" id="inputytcaption" placeholder="Caption" class="span4 dnlv-inputytcaption">
+					</div>
+					<div>
+						<button type="button" class="btn btn-success dnlv-addToList">Add to list</button>
+						<button type="button" class="btn btn-info dnlv-preview">Preview</button>
+						<button type="button" class="btn btn-warning dnlv-clear">Clear</button>
+					</div>
+					<div><br></div>
+					<div>
+						<div class="input-prepend control-group">
+							<span class="add-on">Container tag</span>
+							<input class="span1 dnlv-inputyttag" id="inputyttag" type="text" placeholder="div">
+						</div>
+					</div>
+					<div>
+						<div class="input-prepend control-group">
+							<span class="add-on">Tag's Class</span>
+							<input class="span3 dnlv-inputyttagclass" id="inputyttagclass" type="text" placeholder="ytShownotes yet-another-class">
+						</div>
+					</div>
+					<div>
+						<button type="button" class="btn btn-success dnlv-getSource">Get HTML</button>
+						<button type="button" class="btn btn-warning dnlv-clearSource">Clear</button>
+					</div>
+				</form>
+			</div>
+			<div class="span8">
+				<table class="table dnlv-list">
+					<thead>
+						<tr>
+							<td class="span6">Caption</td>
+							<td class="span1">Start</td>
+							<td class="span1">Stop</td>
+							<td class="span1">Action</td>
+						</tr>
+					</thead>
+					<tbody>
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12 dnlv-sourceCode">
+				<pre></pre>
+			</div>
+		</div>
+		<hr>
+		<footer>
+			<p>&copy; 2013 <a href="http://danilov.me/">Michael Danilov</a>. Powered by <a href="https://github.com/">GitHub</a> with using <a href="http://getbootstrap.com/">Bootstrap</a>, <a href="http://jquery.com/">jQuery</a> and <a href="http://softwaremaniacs.org/soft/highlight/en/">highlight.js</a></p>
+		</footer>
+	</div>
+	<script type="text/javascript" src="//yandex.st/jquery/2.0.3/jquery.min.js" defer></script>
+	<script type="text/javascript" src="../static/jquery.ytShownotes.js" defer></script>
+	<script type="text/javascript" src="//yandex.st/highlightjs/7.3/highlight.min.js" defer></script>
+	<script type="text/javascript" src="./script.js" defer></script>
+</body>
+</html>

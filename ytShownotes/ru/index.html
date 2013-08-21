@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<base href="/ytShownotes/ru/">
+	<title>Как ... - jQuery ytShownotes Plugin</title>
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//yandex.st/highlightjs/7.3/styles/github.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="./">jQuery ytShownotes Plugin</a>
+				<ul class="nav">
+					<li class="active"><a href="./">Как ...</a></li>
+					<li><a href="./demo/">Демонстрация</a></li>
+					<li><a href="./tools/">Инструментарий</a></li>
+					<li class="divider-vertical"></li>
+					<li><a href="https://github.com/MichaelDanilov/jQuery.ytShownotes/archive/master.zip">Скачать</a></li>
+					<li><a href="https://github.com/MichaelDanilov/jQuery.ytShownotes">Исходный код GitHub</a></li>
+				</ul>
+				<ul class="nav pull-right">
+					<li><a href="../en/">In English</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<h1>Как ...</h1>
+				<h2>Установка</h2>
+				<p>
+					Скачайте и установите jQuery. <a href="http://jquery.com/download/">Инструкция на оф. сайте</a> (по-английски). Например так:
+				</p>
+				<pre class="xml">&lt;script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js" defer&gt;&lt;/script&gt;</pre>
+				<p>
+					<a href="https://github.com/MichaelDanilov/jQuery.ytShownotes/archive/master.zip">Скачайте</a> и установите плагин ytShownotes. Например так:
+				</p>
+				<pre class="xml">&lt;script type="text/javascript" src="jquery.ytShownotes.js" defer&gt;&lt;/script&gt;</pre>
+				<p class="alert">
+					Не используйте ссылку, которую вы можете увидеть в коде этого сайта - она может поменяться!
+				</p>
+				<p class="alert">
+					Используйте только оттестированную на вашем сайте версию плагина. Не заменяйте бездумно старую версию на новую, всегда тестируйте в вашем окружении!
+				</p>
+				<h2>Использование</h2>
+				<h3>Блок для видео</h3>
+				<p>
+					Перед использованием плагина необходимо в html-код страницы вставить блок, куда будет помещаться видео, и назначить ему определённый идентификатор.
+				</p>
+				<pre class="xml">&lt;div id="ytShownotesWrapper"&gt;
+  &lt;div id="ytShownotesPlayer"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+				<p class="alert">
+					Блок-обёртка должен иметь идентификатор <code>ytShownotesWrapper</code>. Внутрь него будет вставляться iframe с идентификатором <code>ytShownotesPlayer</code>.
+				</p>
+				<h3>Формат данных</h3>
+				<p>
+					Данный плагин использует определённый формат данных. Прежде всего нужно привести данные в нужный формат. Если же данные уже в нужном формате, то смотрите пункт Инициализация.
+				</p>
+				<h4>Использование генератора</h4>
+				<p>
+					На странице <a href="./tools/">Иструментарий</a> расположен генератор данных в нужный формат.</p>
+				<p>
+					На странице генератора необходимо обязательно указать ссылку на Youtube-видео и указать описание.
+				</p>
+				<p>
+					Необязательными параметрами являются время старта и остановки ролика, также необязательно указывать размер блока с видео (по умолчанию 640 на 360 пикселей).
+				</p>
+				<p>
+					Кнопка <b>Добавить</b> добавит ссылку на видео в список. Кнопка <b>Удалить</b> удалит из списка.
+				</p>
+				<p>
+					Кнопка <b>Предпросмотр</b> позволит просмотреть видео без добавления в список.
+				</p>
+				<p>
+					Кнопка <b>Очистить</b> очищает лишь поля формы, но не список.
+				</p>
+				<p>
+					Поля <b>Тег</b> и <b>Класс</b> позволяют сгенерировать данные из списка в нужный формат, обернув их в указанный вами тег (по умолчанию <code>div</code>) и задать определённый класс (по умолчанию <code>ytShownotes</code>).
+				</p>
+				<p>
+					Кнопка <b>Получить HTML</b> отобразит полученный код внизу. Эти данные готовы для использования.
+				</p>
+				<h3>Инициализация плагина и привязка к данным</h3>
+				<p>
+					Для инициализации плагина и прявязки его к данным необходимо вызвать следующую функцию плагина:
+				</p>
+				<pre class="js">$('.ytShownotes').ytShownotes();</pre>
+				<p>
+					или же явно указать событие, к которому привязывается запуск плеера:
+				</p>
+				<pre class="js">$('.ytShownotes').ytShownotes('click');</pre>
+				<p>
+					где <code>.ytShownotes</code> - это класс, в котором содержатся данные, а <code>click</code> - это событие клика на элемент;
+				</p>
+				<h3>Работает?</h3>
+				<p>
+					Если вы проделали все шаги правильно, то по клику на ваши данные в блоке <code>div#ytShownotesWrapper</code> будет запущено указанное вами видео с указанными вами параметрами.
+				</p>
+				<h3>Не работает?</h3>
+				<p>
+					Если же плагин не работает, то необходимо вернуть в самое начало инструкции и проверить выполнение всех шагов.
+				</p>
+				<p>
+					Если после повторной проверки плагин не заработал, то оставьте сообщение об ошибке <a href="https://github.com/MichaelDanilov/jQuery.ytShownotes/issues">здесь</a>.
+				</p>
+				<p>
+					Вопросы и прочие предложения также оставляйте на странице <a href="https://github.com/MichaelDanilov/jQuery.ytShownotes/issues">Issues</a> на GitHub'е.
+				</p>
+			</div>
+		</div>
+		<hr>
+		<footer>
+			<p>&copy; 2013 <a href="http://danilov.me/">Michael Danilov</a>. Работает на <a href="https://github.com/">GitHub</a> с использованием <a href="http://getbootstrap.com/">Bootstrap</a>, <a href="http://jquery.com/">jQuery</a> и <a href="http://softwaremaniacs.org/soft/highlight/">highlight.js</a></p>
+		</footer>
+	</div>
+	<script type="text/javascript" src="//yandex.st/jquery/2.0.3/jquery.min.js" defer></script>
+	<script type="text/javascript" src="../static/jquery.ytShownotes.js" defer></script>
+	<script type="text/javascript" src="//yandex.st/highlightjs/7.3/highlight.min.js" defer></script>
+	<script type="text/javascript" src="./script.js" defer></script>
+</body>
+</html>
