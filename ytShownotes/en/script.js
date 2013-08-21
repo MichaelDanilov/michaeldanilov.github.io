@@ -24,8 +24,15 @@ var error = {
 	getId: function() {
 		return '#' + this.id;
 	},
-	setStatus: function(error, obj = {}, action = ['success', 'error']) {
-		this.status = error;
+	setStatus: function() {
+		this.status = arguments[0];
+		var obj = {}, action = ['success', 'error'];
+		if (arguments[1] !== undefined) {
+			obj = arguments[1];
+		};
+		if (arguments[2] !== undefined) {
+			action = arguments[2];
+		};
 		if (obj !== {}) {
 			this.id = obj.attr('id');
 			if (action[0] !== undefined && action[1] !== undefined) {
